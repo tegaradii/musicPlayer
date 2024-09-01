@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/judul"
+        android:textColor="@color/yellow"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"/>
+
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/txt_judul"
+        android:layout_alignBottom="@id/txt_judul"
+        android:layout_toStartOf="@id/txt_judul"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        />
+
+    <ImageView
+        android:id="@+id/image_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_judul"
+        android:layout_alignTop="@+id/txt_judul"
+        android:layout_toEndOf="@id/txt_judul"
+        android:src="@drawable/overview" />
+
+    <ImageView
+        android:id="@+id/image_song"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded"
+        android:src="@drawable/rectangle_6"
+        android:clipToOutline="true"
+        android:layout_below="@id/txt_judul"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_song"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:max="100"
+        android:progress="0"
+        android:thumb="@drawable/seekbar_thumb"
+        android:progressBackgroundTint="@color/yellow"
+        android:progressTint="@color/yellow"
+        />
+
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp"
+        android:text="@string/singer"
+        android:textColor="@color/oren"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_judul_lagu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist"
+        android:text="@string/judul"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/btn_play"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/txt_judul_lagu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/baseline_play_circle_24"
+        />
+
+    <ImageView
+        android:id="@+id/btn_play2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_judul_lagu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63.5dp"
+        android:src="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/btn_previous"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/txt_judul_lagu"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_alignTop="@+id/btn_play"
+        android:layout_alignBottom="@+id/btn_play"
+        android:src="@drawable/baseline_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/btn_next"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/txt_judul_lagu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
+        android:layout_alignTop="@+id/btn_play"
+        android:layout_alignBottom="@+id/btn_play"
+        android:src="@drawable/baseline_skip_next_24"
+        />
+
+
+</RelativeLayout>
